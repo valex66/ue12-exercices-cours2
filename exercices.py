@@ -29,6 +29,8 @@ def create_ones():
     return np.ones((5)) 
 
 
+test
+
 print(create_ones())  # attendu: [1. 1. 1. 1. 1.]
 
 # %% [markdown]
