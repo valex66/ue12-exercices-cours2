@@ -13,7 +13,7 @@ import numpy as np
 
 # %%
 def create_zeros():
-    pass  # 👈 Insérez le code ici
+    return np.zeros((5))  # 👈 Insérez le code ici
 
 
 print(create_zeros())  # attendu: [0. 0. 0. 0. 0.]
@@ -26,7 +26,7 @@ print(create_zeros())  # attendu: [0. 0. 0. 0. 0.]
 
 # %%
 def create_ones():
-    pass  # 👈 Insérez le code ici
+    return np.ones((5)) 
 
 
 print(create_ones())  # attendu: [1. 1. 1. 1. 1.]
@@ -39,7 +39,7 @@ print(create_ones())  # attendu: [1. 1. 1. 1. 1.]
 
 # %%
 def create_range():
-    pass  # 👈 Insérez le code ici
+    return np.arange(10,51)  # 👈 Insérez le code ici
 
 
 print(create_range())  # attendu: [10 11 12 13 14 15 16 17 ...] (jusqu'à 50 inclus)
@@ -52,7 +52,7 @@ print(create_range())  # attendu: [10 11 12 13 14 15 16 17 ...] (jusqu'à 50 inc
 
 # %%
 def create_identity():
-    pass  # 👈 Insérez le code ici
+    return np.eye(3)  # 👈 Insérez le code ici
 
 
 print(create_identity())  # attendu: [[1. 0. 0.]
@@ -67,9 +67,9 @@ print(create_identity())  # attendu: [[1. 0. 0.]
 
 # %%
 def create_random():
-    pass  # 👈 Insérez le code ici
+    return np.random.rand(3,3)  # 👈 Insérez le code ici
 
-
+#np.random.rand?
 print(create_random())  # attendu: un tableau 3x3 de valeurs aléatoires entre 0 et 1
 
 # %% [markdown]
@@ -83,7 +83,8 @@ print(create_random())  # attendu: un tableau 3x3 de valeurs aléatoires entre 0
 
 # %%
 def add_five(arr):
-    pass  # 👈 Insérez le code ici
+    arr+=5  # 👈 Insérez le code ici
+    return arr
 
 
 print(add_five(np.array([1, 2, 3, 4, 5])))  # attendu: [6 7 8 9 10]
@@ -96,7 +97,8 @@ print(add_five(np.array([1, 2, 3, 4, 5])))  # attendu: [6 7 8 9 10]
 
 # %%
 def square(arr):
-    pass  # 👈 Insérez le code ici
+    arr=np.power(arr,2)
+    return arr
 
 
 print(square(np.array([1, 2, 3, 4, 5])))  # attendu: [ 1  4  9 16 25]
@@ -109,8 +111,9 @@ print(square(np.array([1, 2, 3, 4, 5])))  # attendu: [ 1  4  9 16 25]
 
 # %%
 def sin_values():
-    pass  # 👈 Insérez le code
-
+    x=np.arange(0,2*np.pi+0.05,0.1)  # 👈 Insérez le code
+    y=np.sin(x)
+    return y
 
 print(
     sin_values()
@@ -132,7 +135,7 @@ def f(arr1, arr2):
 
 
 def f_vectorized(arr1, arr2):
-    pass  # 👈 Insérez le code ici
+    return 2*arr1+3*arr2  # 👈 Insérez le code ici
 
 
 print(
@@ -156,8 +159,13 @@ def g(x):
     return result
 
 
+np.where?
+
+
+
+
 def g_vectorized(x):
-    pass  # 👈 Insérez le code ici
+    return   # 👈 Insérez le code ici
 
 
 print(g_vectorized(np.array([1, -2, 3, -4, 5])))  # attendu: [ 1 -2  9 -4 25]
