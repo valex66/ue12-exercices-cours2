@@ -178,7 +178,7 @@ print(g_vectorized(np.array([1, -2, 3, -4, 5])))  # attendu: [ 1 -2  9 -4 25]
 import numpy as np
 
 def select_even(arr):
-    return arr[1::2] # 👈 Insérez le code ici
+    return arr[arr%2==0] # 👈 Insérez le code ici
 
 
 print(
@@ -244,7 +244,12 @@ print(swap_first_rows(np.array([[1, 2], [3, 4], [5, 6]])))  # attendu: [[3 4]
 import numpy as np 
 
 def funny_checkerboard(size):
-    pass  # 👈 Insérez le code ici
+    f=np.zeros((size,size))
+    f[::2,::2]=1
+    f[1::2,1::2]=1
+    for a in range (0,size,2):
+        f[a,::2]+=a
+    return f
 
 a,b=np.indices((3,3))
 a,b
